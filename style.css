@@ -1,0 +1,82 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap');
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    font-size: 20px;
+    line-height: 1.5;
+    font-weight: bold;
+    color: #333;
+    background-color: #F1F2F3;
+    padding: 20px;
+}
+
+.section__input input {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    outline: 0;
+    border: transparent;
+    background:transparent;
+    padding: 10px;
+    gap: 6px;
+    margin-bottom: 10px;
+    direction:rtl;
+}
+
+
+
+#inputValue {
+     height:45px;
+    font-size: 2rem;
+    color: #000;
+
+}
+
+#inputResult {
+    height: 65px;
+    font-size: 3rem;
+    color: #000;
+
+}
+
+.button-section > input:active {
+    background-color: rgb(209 213 219 / var(--tw-bg-opacity, 1));
+  }
+
+
+
+.button-section {
+   display: grid;
+   grid-template-columns:1fr 1fr 1fr 1fr;
+   gap: 14px;
+}
+
+.button-section > .btnPrimary {
+   	background-color: rgb(99 102 241 / var(--tw-bg-opacity, 1));
+    color: #fff;
+}
+
+.button-section > .btnGray {
+    background-color: rgb(156 163 175 / var(--tw-bg-opacity, 1));
+
+    color: #fff;
+}
+
+.button-section input {
+   padding: 1rem;
+   font-size:1.5rem;
+   border-radius: 12px;
+   outline: none;
+   border: 1px solid #fff;
+   background: #fff;
+   box-shadow:#fff;
+   font-weight:500;
+}
