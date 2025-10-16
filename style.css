@@ -3,9 +3,9 @@
 *,
 *::before,
 *::after {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 body {
@@ -18,23 +18,41 @@ body {
     padding: 20px;
 }
 
+.main_Section {
+   width: 100%;
+}
+
+/* Light theme css   */
+
+
+
+.light-theme {
+    color: #333;
+    background-color: #F1F2F3;
+}
+
+
+
+
+
+
 .section__input input {
     display: flex;
     flex-direction: column;
     width: 100%;
     outline: 0;
     border: transparent;
-    background:transparent;
+    background: transparent;
     padding: 10px;
     gap: 6px;
     margin-bottom: 10px;
-    direction:rtl;
+    direction: rtl;
 }
 
 
 
 #inputValue {
-     height:45px;
+    height: 45px;
     font-size: 2rem;
     color: #000;
 
@@ -47,36 +65,132 @@ body {
 
 }
 
-.button-section > input:active {
+.button-section>input:active {
     background-color: rgb(209 213 219 / var(--tw-bg-opacity, 1));
-  }
+}
 
 
 
 .button-section {
-   display: grid;
-   grid-template-columns:1fr 1fr 1fr 1fr;
-   gap: 14px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 14px;
 }
 
-.button-section > .btnPrimary {
-   	background-color: rgb(99 102 241 / var(--tw-bg-opacity, 1));
+.button-section>.btnPrimary {
+    background-color: rgb(99 102 241 / var(--tw-bg-opacity, 1));
     color: #fff;
 }
 
-.button-section > .btnGray {
+.button-section>.btnGray {
     background-color: rgb(156 163 175 / var(--tw-bg-opacity, 1));
 
     color: #fff;
 }
 
 .button-section input {
-   padding: 1rem;
-   font-size:1.5rem;
-   border-radius: 12px;
-   outline: none;
-   border: 1px solid #fff;
-   background: #fff;
-   box-shadow:#fff;
-   font-weight:500;
+    padding: 1rem;
+    font-size: 1.5rem;
+    border-radius: 12px;
+    outline: none;
+    border: 1px solid #fff;
+    background: #fff;
+    box-shadow: #fff;
+    font-weight: 500;
 }
+
+.theme-btn {
+    display: flex;
+    justify-content: center;
+}
+
+.theme-btn input {
+    display: none;
+}
+
+.theme-btn label {
+    display: inline-block;
+    width: 84px;
+    padding: 4px 9px;
+    /* //background: #2E2F38; */
+    background: #fff;
+    border-radius: 25px;
+    position: relative;
+    text-align: left;
+}
+
+.theme-btn label::before {
+    content: "";
+    position: absolute;
+    width: 23px;
+    height: 23px;
+    background-color: #bbbaba;
+    top: 7px;
+    right: 6px;
+    border-radius: 25px;
+    transition: 0.5s;
+}
+
+/* .checkBoxInput:checked > label::before { 
+   transform: translateX(-48px);
+} */
+/* Move the knob to the left when in active (dark) mode */
+.theme-btn.active label::before {
+    transform: translateX(-48px);
+    /* Adjust as needed */
+    background-color: #333;
+}
+
+.theme-btn.active label {
+    text-align: right;
+}
+
+.theme-btn.active label::before {
+    background-color:#4E505F;
+}
+.theme-btn label i {
+    color: #4B5EFC;
+}
+
+
+
+/* Dark Theme CSS  */
+ 
+
+.dark-theme {
+    color: #ccc;
+    background-color: #17171C;
+}
+
+.dark-theme .theme-btn label { 
+      background-color: #2E2F38;
+}
+
+.dark-theme #inputValue , .dark-theme #inputResult {
+    color: #fff;
+}
+.dark-theme .button-section>.btnPrimary {
+    background-color: rgb(99 102 241 / var(--tw-bg-opacity, 1));
+    color: #fff;
+    border: transparent;
+}
+
+.dark-theme .button-section>.btnGray {
+    background-color: rgb(156 163 175 / var(--tw-bg-opacity, 1));
+    border: transparent;
+}
+
+
+@media only screen and (min-width:1536px) { 
+   .main_Section {
+      width: 30%;
+      margin: 0 auto;
+   }
+ }  
+
+@media only screen and (min-width:768px) { 
+   .main_Section {
+      width: 50%;
+      margin: 0 auto;
+   }
+ }  
